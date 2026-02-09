@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maryline Iannotta - Analista de datos freelance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Maryline Iannotta, analista de datos freelance especializada en limpieza de datos, estudios de mercado y dashboards en Power BI para pymes, e‑commerce y ONG." />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #dbeafe;
+      --bg: #f5f5f5;
+      --text: #111827;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1d4ed8, #0f766e);
+      color: white;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #e5e7eb;
+      max-width: 650px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: rgba(15, 23, 42, 0.35);
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.85rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn-primary, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: white;
+      color: #111827;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background-color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(15,23,42,0.25);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+      font-size: 0.8rem;
+    }
+
+    .card p {
+      font-size: 0.93rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card ul {
+      margin-left: 1.1rem;
+      margin-top: 0.2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.55rem;
+      background-color: var(--primary-light);
+      color: #1d4ed8;
+      border-radius: 999px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .about-card {
+      background-color: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 1.2rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .about-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .about-card p {
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background-color: #f9fafb;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid-2, .grid-3, .about {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 2rem 1.2rem 2.5rem;
+      }
+
+      main {
+        padding: 2rem 1.2rem 2.5rem;
+      }
+
+      .hero-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <div class="hero-title">Maryline Iannotta – Analista de datos freelance para pymes, e‑commerce y ONG</div>
+        <p class="hero-subtitle">
+          Ayudo a pymes, comercios electrónicos y organizaciones de impacto a limpiar, estructurar y analizar sus datos para convertirlos en paneles claros y estudios accionables: data cleaning, estudios de mercado, Power BI y storytelling con datos.
+        </p>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">Limpieza de datos</span>
+        <span class="tag">Estudios de mercado</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Python</span>
+        <span class="tag">Finanzas y contabilidad</span>
+        <span class="tag">E‑commerce</span>
+        <span class="tag">ONG e impacto</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://fr.malt.be/profile/marylineiannotta" class="btn-primary">Ver mi perfil en Malt</a>
+        <a href="https://www.linkedin.com/in/maryline-i-48b6201b1/" class="btn-outline">Contactar por LinkedIn</a>
+      </div>
+      <div style="margin-top:0.5rem; font-size:0.9rem;">
+        <span>Idioma: </span>
+        <a href="/portfolio-malt/">FR</a> · 
+        <strong>ES</strong>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- Competencias -->
+      <section id="competencias">
+        <h2>Competencias clave</h2>
+        <p class="section-intro">
+          Perfil híbrido datos + negocio: limpieza de datos, análisis, visualización y comprensión de los retos de rentabilidad, ventas y actividad en pymes, e‑commerce y ONG.
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Datos y análisis</h3>
+            <p>Limpieza, preparación y estructuración de datos (Excel, CSV, exportaciones de herramientas), análisis exploratorio y estudios de mercado.</p>
+            <ul>
+              <li>Limpieza, fusión y estandarización</li>
+              <li>Análisis descriptivo y exploratorio</li>
+              <li>Segmentaciones sencillas e indicadores clave</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Herramientas y técnicas</h3>
+            <p>Python, Power BI, Excel avanzado y herramientas de presentación para entregar resultados claros y accionables.</p>
+            <ul>
+              <li>Python (pandas, visualización)</li>
+              <li>Power BI, paneles interactivos</li>
+              <li>Excel, Canva, Git/GitHub</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Negocio y storytelling</h3>
+            <p>Comprensión de los retos de pymes, e‑commerce y ONG, con foco en la pedagogía y en la toma de decisiones.</p>
+            <ul>
+              <li>Contexto contable y financiero</li>
+              <li>Lectura de KPIs de negocio</li>
+              <li>Storytelling de datos para perfiles no técnicos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios">
+        <h2>Servicios para tus proyectos de datos</h2>
+        <p class="section-intro">
+          Servicios pensados para las necesidades concretas de pymes, comercios electrónicos, ONG y proyectos con impacto.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Limpieza y preparación de datos</h3>
+            <small>Excel, CRM, exportaciones de software, bases de clientes</small>
+            <p>Limpieza, estructuración y mejora de la calidad de tus archivos para obtener una base fiable y lista para el análisis.</p>
+            <div class="chip-row">
+              <span class="chip">Eliminación de duplicados</span>
+              <span class="chip">Gestión de valores faltantes</span>
+              <span class="chip">Estandarización</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Estudios de mercado y análisis</h3>
+            <small>Clientes, ventas, sectores, datos públicos</small>
+            <p>Análisis exploratorios para entender mejor a tus clientes, tu mercado o tus beneficiarios, con entregables visuales y sintéticos.</p>
+            <div class="chip-row">
+              <span class="chip">Segmentación</span>
+              <span class="chip">Tendencias</span>
+              <span class="chip">Recomendaciones</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Dashboards en Power BI</h3>
+            <small>Seguimiento de ventas, finanzas, actividad</small>
+            <p>Creación de paneles a medida para seguir tus KPIs: facturación, ticket medio, margen, actividad comercial, etc.</p>
+            <div class="chip-row">
+              <span class="chip">Power BI</span>
+              <span class="chip">KPIs</span>
+              <span class="chip">Vista directiva</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Storytelling y presentaciones</h3>
+            <small>Soportes para equipos, socios y financiadores</small>
+            <p>Creación de presentaciones claras (Canva) para compartir los resultados con equipos no técnicos.</p>
+            <div class="chip-row">
+              <span class="chip">Data storytelling</span>
+              <span class="chip">Canva</span>
+              <span class="chip">Síntesis</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="proyectos">
+        <h2>Proyectos y casos de uso</h2>
+        <p class="section-intro">
+          Algunos ejemplos de proyectos que ilustran mi forma de trabajar: desde la preparación de los datos hasta el entregable final orientado a la decisión.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Estudio de mercado para una pyme</h3>
+            <small>Segmentación de clientes y oportunidades</small>
+            <p><strong>Objetivo:</strong> ayudar a una pequeña empresa a entender mejor a sus clientes y su mercado (perfiles, zonas, tendencias).</p>
+            <p><strong>Enfoque:</strong> limpieza y fusión de datos (ventas, CRM, encuestas), análisis descriptivo y visualizaciones (Python / Power BI).</p>
+            <p><strong>Resultado:</strong> identificación de segmentos prioritarios y recomendaciones para el posicionamiento y la oferta.</p>
+            <div class="chip-row">
+              <span class="chip">Estudio de mercado</span>
+              <span class="chip">Segmentación</span>
+              <span class="chip">Python / Power BI</span>
+            </div>
+            <p style="margin-top:0.6rem;">
+              <a href="https://github.com/Maia-iant/Etude-de-marche" target="_blank" rel="noopener noreferrer">Ver el proyecto en GitHub</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Análisis de datos de alimentación mundial</h3>
+            <small>Datos abiertos, retos globales</small>
+            <p><strong>Objetivo:</strong> analizar datos de producción, consumo y acceso a la alimentación para poner de relieve desigualdades entre regiones.</p>
+            <p><strong>Enfoque:</strong> limpieza de datos, análisis temporales y comparativos, visualizaciones y narrativa alrededor de la seguridad alimentaria.</p>
+            <p><strong>Resultado:</strong> soporte de análisis para ONG o proyectos con impacto social.</p>
+            <div class="chip-row">
+              <span class="chip">Datos abiertos</span>
+              <span class="chip">Análisis exploratorio</span>
+              <span class="chip">Storytelling</span>
+            </div>
+            <p style="margin-top:0.6rem;">
+              <a href="https://github.com/Maia-iant/AnalyseAlimentation-Mondiale-2013-2017" target="_blank" rel="noopener noreferrer">Ver el proyecto en GitHub</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Análisis inmobiliario (data immo)</h3>
+            <small>Precio/m², zonas, tipos de inmuebles</small>
+            <p><strong>Objetivo:</strong> entender la evolución de los precios inmobiliarios por zona y tipo de inmueble para apoyar la toma de decisiones.</p>
+            <p><strong>Enfoque:</strong> limpieza de datos, eliminación de valores atípicos, visualizaciones (mapas, distribuciones, indicadores).</p>
+            <p><strong>Resultado:</strong> detección de zonas atractivas o infravaloradas.</p>
+            <div class="chip-row">
+              <span class="chip">Inmobiliario</span>
+              <span class="chip">Visualización de datos</span>
+              <span class="chip">Precio/m²</span>
+            </div>
+            <p style="margin-top:0.6rem;">
+              <a href="https://github.com/Maia-iant/data_immo" target="_blank" rel="noopener noreferrer">Ver el proyecto en GitHub</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Detección de billetes falsos</h3>
+            <small>Clasificación y detección de anomalías</small>
+            <p><strong>Objetivo:</strong> construir un modelo de machine learning para clasificar billetes verdaderos y falsos a partir de medidas numéricas.</p>
+            <p><strong>Enfoque:</strong> preparación de datos, análisis exploratorio, entrenamiento de un modelo de clasificación, evaluación de resultados.</p>
+            <p><strong>Resultado:</strong> ejemplo práctico de detección de fraude/anomalías.</p>
+            <div class="chip-row">
+              <span class="chip">Machine learning</span>
+              <span class="chip">Clasificación</span>
+              <span class="chip">Detección de anomalías</span>
+            </div>
+            <p style="margin-top:0.6rem;">
+              <a href="https://github.com/Maia-iant/Detecter-des-faux-billets-avec-Python" target="_blank" rel="noopener noreferrer">Ver el proyecto en GitHub</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Paridad e indicadores internacionales</h3>
+            <small>Igualdad de género</small>
+            <p><strong>Objetivo:</strong> analizar indicadores de igualdad de género (educación, empleo, representación) por país y en el tiempo.</p>
+            <p><strong>Enfoque:</strong> recopilación y preparación de datos abiertos, visualizaciones comparativas y temporales, síntesis de brechas.</p>
+            <p><strong>Resultado:</strong> soporte para ONG o instituciones que trabajan en temas de igualdad.</p>
+            <div class="chip-row">
+              <span class="chip">Paridad</span>
+              <span class="chip">Datos públicos</span>
+              <span class="chip">Análisis comparativos</span>
+            </div>
+            <p style="margin-top:0.6rem;">
+              <a href="https://github.com/Maia-iant/Observation-mondiale-de-la-parite" target="_blank" rel="noopener noreferrer">Ver el proyecto en GitHub</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Gestión de datos de un e‑commerce</h3>
+            <small>Ventas, clientes, productos</small>
+            <p><strong>Objetivo:</strong> ofrecer una visión clara del rendimiento de una tienda online (facturación, ticket medio, productos clave).</p>
+            <p><strong>Enfoque:</strong> limpieza de exportaciones de e‑commerce, creación de KPIs y dashboard (Power BI / Excel).</p>
+            <p><strong>Resultado:</strong> mejor seguimiento de ventas y apoyo a las decisiones de marketing.</p>
+            <div class="chip-row">
+              <span class="chip">E‑commerce</span>
+              <span class="chip">KPIs</span>
+              <span class="chip">Dashboard</span>
+            </div>
+            <p style="margin-top:0.6rem;">
+              <a href="https://github.com/Maia-iant/Gestion-des-donnees-d-un-commerce-" target="_blank" rel="noopener noreferrer">Ver el proyecto en GitHub</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mí -->
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="about">
+          <div class="about-card">
+            <h3>Quién soy</h3>
+            <p>
+              Soy Maryline Iannotta, analista de datos freelance con formación previa en contabilidad. Esta doble experiencia me permite traducir tus preguntas de negocio (finanzas, ventas, actividad) en análisis de datos concretos. 
+              Me gusta trabajar con estructuras donde cada decisión cuenta: pymes, comercios, e‑commerce, ONG y proyectos con impacto social.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Mi forma de trabajar</h3>
+            <p>
+              Trabajo en remoto, con explicaciones claras y entregables estructurados y reutilizables. Puedo intervenir en una necesidad puntual (estudio, dashboard) o en la puesta en marcha de un reporting más duradero.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto">
+        <h2>Trabajemos juntos</h2>
+        <p class="section-intro">
+          ¿Necesitas limpieza de datos, un dashboard, un estudio de mercado o un análisis puntual sobre tus datos? Hablemos.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Contacto directo</h3>
+            <p>Puedes contactarme a través de Malt para hablar de tu contexto, tus datos y tus objetivos.</p>
+            <p><strong>Malt:</strong> <a href="https://fr.malt.be/profile/marylineiannotta">https://fr.malt.be/profile/marylineiannotta</a></p>
+          </div>
+          <div class="card">
+            <h3>Redes</h3>
+            <p>También comparto proyectos y análisis en LinkedIn y GitHub.</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/maryline-i-48b6201b1/">linkedin.com/in/maryline-i-48b6201b1/</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Maia-iant">github.com/Maia-iant</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#competencias">Competencias</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div>Portfolio analista de datos freelance – sitio alojado en GitHub Pages</div>
+  </footer>
+</body>
+</html>
+
