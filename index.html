@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio Data Analyst Freelance - Maia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Data analyst freelance spécialisée en data cleaning, études de marché et dashboards Power BI pour TPE/PME, e-commerce et ONG." />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #dbeafe;
+      --bg: #f5f5f5;
+      --text: #111827;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1d4ed8, #0f766e);
+      color: white;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #e5e7eb;
+      max-width: 650px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: rgba(15, 23, 42, 0.35);
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.85rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn-primary, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: white;
+      color: #111827;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background-color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(15,23,42,0.25);
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+      font-size: 0.8rem;
+    }
+
+    .card p {
+      font-size: 0.93rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card ul {
+      margin-left: 1.1rem;
+      margin-top: 0.2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.55rem;
+      background-color: var(--primary-light);
+      color: #1d4ed8;
+      border-radius: 999px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .about-card {
+      background-color: var(--card-bg);
+      border-radius: 0.75rem;
+      padding: 1.2rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .about-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .about-card p {
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background-color: #f9fafb;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .grid-2, .grid-3, .about {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 2rem 1.2rem 2.5rem;
+      }
+
+      main {
+        padding: 2rem 1.2rem 2.5rem;
+      }
+
+      .hero-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <div class="hero-title">Data Analyst freelance pour TPE/PME, e‑commerce et ONG</div>
+        <p class="hero-subtitle">
+          Je nettoie, analyse et transforme vos données en tableaux de bord et études claires pour vous aider à décider plus vite : data cleaning, études de marché, Power BI et storytelling data.
+        </p>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">Data cleaning</span>
+        <span class="tag">Études de marché</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Python</span>
+        <span class="tag">Finance & compta</span>
+        <span class="tag">E‑commerce</span>
+        <span class="tag">ONG & impact</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://www.malt.fr/profile/TON-LIEN-MALT" class="btn-primary">Voir mon profil sur Malt</a>
+        <a href="https://www.linkedin.com/in/TON-LIEN-LINKEDIN" class="btn-outline">Me contacter sur LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- Compétences -->
+      <section id="competences">
+        <h2>Compétences clés</h2>
+        <p class="section-intro">
+          Un profil hybride data + métier : nettoyage de données, analyse, visualisation et compréhension des enjeux business (comptabilité, finance, commerce, ONG).
+        </p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Data & Analytics</h3>
+            <p>Data cleaning, préparation et structuration de données (Excel, CSV, exports outils), analyse exploratoire et études de marché.</p>
+            <ul>
+              <li>Nettoyage, fusion, standardisation</li>
+              <li>Analyses descriptives et exploratoires</li>
+              <li>Segmentation simple, indicateurs clés</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Outils & techniques</h3>
+            <p>Python, Power BI, Excel avancé et outils de présentation pour des livrables clairs et actionnables.</p>
+            <ul>
+              <li>Python (pandas, visualisation)</li>
+              <li>Power BI, dashboards interactifs</li>
+              <li>Excel, Canva, Git/GitHub</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Business & Storytelling</h3>
+            <p>Compréhension des enjeux de TPE/PME, e‑commerce et ONG avec un focus sur la pédagogie et la prise de décision.</p>
+            <ul>
+              <li>Contexte compta/finance</li>
+              <li>Lecture de KPI business</li>
+              <li>Storytelling data pour non-tech</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <h2>Services pour vos projets data</h2>
+        <p class="section-intro">
+          Des prestations conçues pour répondre aux besoins concrets des TPE/PME, commerces, ONG et projets à impact.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Limpieza & préparation de données</h3>
+            <small>Excel, CRM, exports logiciels, bases clients</small>
+            <p>Nettoyage, structuration et mise en qualité de vos fichiers pour obtenir une base exploitable et fiable.</p>
+            <div class="chip-row">
+              <span class="chip">Suppression de doublons</span>
+              <span class="chip">Gestion des valeurs manquantes</span>
+              <span class="chip">Standardisation</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Études de marché & analyses</h3>
+            <small>Clients, ventes, secteurs, données publiques</small>
+            <p>Analyses exploratoires pour comprendre vos clients, votre marché ou vos bénéficiaires, avec livrables visuels et synthétiques.</p>
+            <div class="chip-row">
+              <span class="chip">Segmentation</span>
+              <span class="chip">Tendances</span>
+              <span class="chip">Recommandations</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Dashboards Power BI</h3>
+            <small>Suivi ventes, finances, activité</small>
+            <p>Création de tableaux de bord sur mesure pour suivre vos KPI : CA, paniers moyens, marge, activité commerciale, etc.</p>
+            <div class="chip-row">
+              <span class="chip">Power BI</span>
+              <span class="chip">KPIs</span>
+              <span class="chip">Vue dirigeant</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Storytelling & présentations</h3>
+            <small>Supports pour équipes, partenaires, financeurs</small>
+            <p>Création de présentations claires (Canva) pour partager vos résultats auprès d’équipes non techniques.</p>
+            <div class="chip-row">
+              <span class="chip">Data storytelling</span>
+              <span class="chip">Canva</span>
+              <span class="chip">Synthèse</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projets -->
+      <section id="projets">
+        <h2>Projets et cas d’usage</h2>
+        <p class="section-intro">
+          Quelques exemples de projets représentatifs de ma manière de travailler : de la préparation de données au livrable final orienté décision.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Étude de marché pour une PME</h3>
+            <small>Segmentation clients & opportunités</small>
+            <p><strong>Objectif :</strong> aider une petite entreprise à mieux comprendre ses clients et son marché (profils, zones, tendances).</p>
+            <p><strong>Approche :</strong> nettoyage et fusion de données (ventes, CRM, enquêtes), analyses descriptives et visualisations (Python / Power BI).</p>
+            <p><strong>Résultat :</strong> identification de segments prioritaires et recommandations pour le ciblage et l’offre.</p>
+            <div class="chip-row">
+              <span class="chip">Étude de marché</span>
+              <span class="chip">Segmentation</span>
+              <span class="chip">Python / Power BI</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Analyse de données d’alimentation mondiale</h3>
+            <small>Données ouvertes, enjeux globaux</small>
+            <p><strong>Objectif :</strong> analyser des données d’alimentation (production, consommation, accès) pour mettre en lumière des disparités entre régions.</p>
+            <p><strong>Approche :</strong> data cleaning, analyses temporelles et comparatives, visualisations et narration autour de la sécurité alimentaire.</p>
+            <p><strong>Résultat :</strong> support d’analyse pour des acteurs type ONG ou projets à impact.</p>
+            <div class="chip-row">
+              <span class="chip">Données ouvertes</span>
+              <span class="chip">Analyse exploratoire</span>
+              <span class="chip">Storytelling</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Analyses immobilières (data immo)</h3>
+            <small>Prix/m², zones, types de biens</small>
+            <p><strong>Objectif :</strong> comprendre l’évolution des prix immobiliers par zone et type de bien pour aider à la décision.</p>
+            <p><strong>Approche :</strong> nettoyage des données, suppression des valeurs aberrantes, visualisations (cartes, distributions, indicateurs).</p>
+            <p><strong>Résultat :</strong> repérage de zones attractives ou sous-évaluées.</p>
+            <div class="chip-row">
+              <span class="chip">Immobilier</span>
+              <span class="chip">Data viz</span>
+              <span class="chip">Prix/m²</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Détection de faux billets</h3>
+            <small>Classification & détection d’anomalies</small>
+            <p><strong>Objectif :</strong> construire un modèle de machine learning pour distinguer billets vrais et faux à partir de mesures.</p>
+            <p><strong>Approche :</strong> préparation des données, analyses exploratoires, entraînement d’un modèle de classification, évaluation des performances.</p>
+            <p><strong>Résultat :</strong> exemple de cas pratique de détection de fraudes/anomalies.</p>
+            <div class="chip-row">
+              <span class="chip">Machine learning</span>
+              <span class="chip">Classification</span>
+              <span class="chip">Détection d’anomalies</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Parité & indicateurs internationaux</h3>
+            <small>Égalité femmes-hommes</small>
+            <p><strong>Objectif :</strong> analyser des indicateurs de parité (éducation, emploi, représentation) par pays et dans le temps.</p>
+            <p><strong>Approche :</strong> collecte et préparation de données ouvertes, visualisations comparatives et temporelles, synthèse des écarts.</p>
+            <p><strong>Résultat :</strong> support pour ONG ou institutions travaillant sur l’égalité.</p>
+            <div class="chip-row">
+              <span class="chip">Parité</span>
+              <span class="chip">Données publiques</span>
+              <span class="chip">Analyses comparatives</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Gestion des données d’un e‑commerce</h3>
+            <small>Ventes, clients, produits</small>
+            <p><strong>Objectif :</strong> donner une vue claire des performances d’une boutique en ligne (CA, panier moyen, produits phares).</p>
+            <p><strong>Approche :</strong> data cleaning des exports e‑commerce, création de KPI et dashboard (Power BI / Excel).</p>
+            <p><strong>Résultat :</strong> meilleur suivi des ventes et aide à la décision marketing.</p>
+            <div class="chip-row">
+              <span class="chip">E‑commerce</span>
+              <span class="chip">KPIs</span>
+              <span class="chip">Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- À propos -->
+      <section id="about">
+        <h2>À propos</h2>
+        <div class="about">
+          <div class="about-card">
+            <h3>Qui je suis</h3>
+            <p>
+              Je suis data analyst freelance avec un parcours initial en comptabilité. Cette double compétence me permet de traduire vos questions métiers (finances, ventes, activité) en analyses de données concrètes. 
+              J’aime travailler avec des structures où chaque décision compte : TPE/PME, commerces, e‑commerce, ONG et projets à impact.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Ma manière de travailler</h3>
+            <p>
+              Collaboration à distance, explications claires, livrables structurés et réutilisables. Je peux intervenir sur un besoin ponctuel (étude, dashboard) ou sur la mise en place d’un reporting plus durable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Travaillons ensemble</h2>
+        <p class="section-intro">
+          Un besoin de data cleaning, d’étude de marché, de dashboard ou d’analyse sur un jeu de données spécifique ? Parlons-en.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Contact direct</h3>
+            <p>Vous pouvez me contacter via Malt pour discuter de votre besoin, de votre contexte et de vos données.</p>
+            <p><strong>Malt :</strong> <a href="https://www.malt.fr/profile/TON-LIEN-MALT">https://www.malt.fr/profile/TON-LIEN-MALT</a></p>
+          </div>
+          <div class="card">
+            <h3>Réseaux</h3>
+            <p>Je partage également des projets et analyses sur LinkedIn et GitHub.</p>
+            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/TON-LIEN-LINKEDIN">linkedin.com/in/TON-LIEN-LINKEDIN</a></p>
+            <p><strong>GitHub :</strong> <a href="https://github.com/Maia-iant">github.com/Maia-iant</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#competences">Compétences</a>
+      <a href="#services">Services</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>Portfolio data analyst freelance – site hébergé sur GitHub Pages</div>
+  </footer>
+</body>
+</html>
